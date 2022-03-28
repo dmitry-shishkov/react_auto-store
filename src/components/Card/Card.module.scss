@@ -1,0 +1,39 @@
+.card {
+  position: relative;
+  padding: 30px 30px 20px 30px;
+  width: 165px;
+  border: 1px solid #dedede;
+  border-radius: 15px;
+  transition: box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .title {
+    height: 80px;
+    overflow: hidden;
+  }
+
+  .favorite {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+  }
+  .partImg {
+    width: 130px;
+    height: 100px;
+    object-fit: contain;
+  }
+  .priceBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btnPlus {
+    width: 20px;
+    cursor: pointer;
+  }
+}

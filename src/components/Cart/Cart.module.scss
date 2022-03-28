@@ -1,0 +1,157 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  .cart {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    padding: 30px;
+    width: 420px;
+    height: 94vh;
+    background: #fff;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+
+    .greenButton {
+      position: relative;
+      width: 100%;
+      height: 55px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      background: #9dd558;
+      border: 0;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background 0.15s ease-in-out;
+
+      &:hover {
+        background: lighten(#9dd558, 5%);
+      }
+      &:active {
+        background: darken(#9dd558, 5%);
+      }
+
+      img {
+        position: absolute;
+        top: 16px;
+        right: 30px;
+        width: 6%;
+        transition: transform 0.15s ease-in-out;
+      }
+
+      &:hover {
+        img {
+          transform: translateX(5px);
+        }
+      }
+    }
+
+
+    .cartTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .btnCloseBasket {
+        width: 20px;
+        opacity: 0.5;
+        transition: opacity 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .items {
+      flex: 1;
+      margin-bottom: 30px;
+      overflow: auto;
+
+      .cartItem {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 15px;
+        border: 1px solid #f3f3f3;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+          width: 100px;
+          height: 100%;
+        }
+
+        .description {
+          flex: 1;
+          padding: 0 15px 10px 15px;
+        }
+
+        .btnRemove {
+          margin-right: 10px;
+          width: 20px;
+          opacity: 0.5;
+          transition: opacity 0.2s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .totalBlock {
+      padding-bottom: 15px;
+
+      .total {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 30px;
+
+        div {
+          position: relative;
+          top: -3px;
+          flex: 1;
+          margin: 0 7px;
+          height: 1px;
+          border-top: 1px dashed #ccc;
+        }
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+
+      p {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+
+      .greenButtonArrow {
+        img {
+          left: 30px;
+          transform: rotate(-180deg);
+        }
+
+        &:hover {
+          img {
+            transform: translateX(-5px) rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+}

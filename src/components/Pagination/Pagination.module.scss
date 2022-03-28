@@ -1,0 +1,40 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 0 0;
+
+  .pageBtn {
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 3px solid lightblue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border 200ms ease-in-out;
+
+    &:hover {
+      border: 3px solid rgb(16, 186, 243);
+    }
+  }
+
+  .pageBtnActive {
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(16, 186, 243);
+    border: 3px solid rgb(16, 186, 243);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .pageList {
+    display: flex;
+    padding: 0;
+    margin-left: 5px;
+
+    li {
+      margin-right: 5px;
+    }
+  }
+}
